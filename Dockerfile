@@ -25,6 +25,7 @@ RUN apk update && \
     apk add --no-cache \
         python2 \
         py2-pip \
+        gcc \
         ffmpeg && \
     pip install \
         beets  \
