@@ -26,7 +26,7 @@ RUN apk update && \
         python2 \
         py2-pip \
         gcc \
-        ffmpeg 
+        ffmpeg \
         curl \
         expat \
         gdbm \
