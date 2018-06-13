@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bash
+
+# Make folders
+mkdir -p $CONF_LOCATION
+
+# Check if Traccar config files exists, else copy default ones
+for file in default traccar; do
+    if [ -f "$CONF_LOCATION/config.yaml" ];then
+        echo "Le fichier $CONF_LOCATION/config.yaml existe";
+    else
+        echo "Le fichier $CONF_LOCATION/config.yaml n'existe pas, copie du fichier par défaut"
+        cp $CONF_LOCATION/config.yaml.default $CONF_LOCATION/config.yaml
+    fi
+done
+
+# Fix permissions
+chown -R dockeruser:dockeruser $CONF_LOCATION
