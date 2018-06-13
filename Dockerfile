@@ -26,19 +26,49 @@ RUN apk update && \
         python2 \
         py2-pip \
         gcc \
-        ffmpeg && \
-    pip install \
+        ffmpeg 
+        curl \
+        expat \
+        gdbm \
+        gst-plugins-good1 \
+        gstreamer1 \
+        jpeg \
+        lame \
+        libffi \
+        libpng \
+        nano \
+        openjpeg \
+        py2-gobject3 \
+        py2-pip \
+        python2 \
+        sqlite-libs \
+        tar \
+        wget \
+        nasm \
+        x264-dev \
+        x265-dev \
+        libwebp-dev \
+        libass-dev \
+        libcrypto1.0 \
+        libssl1.0 \
+        chromaprint \
+        fdk-aac-dev && \
+    pip install --upgrade --no-cache-dir pip &&
+    pip install --no-cache-dir \
         beets  \
+        beets-copyartifacts \
         discogs-client \
         flask \
         flask-cors \
         gmusicapi \
+        pillow \
         pyacoustid \
         pylast \
         python-mpd2 \
         requests \
         requests_oauthlib \
-        soco
+        soco \
+        unidecode
 
 # Add files
 ADD /root /
