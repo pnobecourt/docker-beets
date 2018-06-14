@@ -30,8 +30,6 @@ RUN apk update && \
         curl \
         expat \
         gdbm \
-        gst-plugins-good1 \
-        gstreamer1 \
         jpeg \
         lame \
         libffi \
@@ -50,9 +48,11 @@ RUN apk update && \
         libwebp-dev \
         libass-dev \
         libcrypto1.0 \
-        libssl1.0 \
-        chromaprint \
-        fdk-aac-dev && \
+        libssl1.0 && \
+#        chromaprint 
+#        fdk-aac-dev && 
+#        gst-plugins-good1 
+#        gstreamer1 
     pip install --upgrade --no-cache-dir pip && \
     pip install --no-cache-dir \
         beets  \
