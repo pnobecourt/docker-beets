@@ -53,7 +53,7 @@ RUN apk update && \
         libssl1.0 \
         chromaprint \
         fdk-aac-dev && \
-    pip install --upgrade --no-cache-dir pip &&
+    pip install --upgrade --no-cache-dir pip && \
     pip install --no-cache-dir \
         beets  \
         beets-copyartifacts \
