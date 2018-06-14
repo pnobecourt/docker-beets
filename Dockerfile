@@ -42,6 +42,10 @@ RUN apk update && \
         sqlite-libs \
         tar \
         wget \
+#        chromaprint 
+#        fdk-aac-dev 
+#        gst-plugins-good1 
+#        gstreamer1 
         nasm \
         x264-dev \
         x265-dev \
@@ -49,10 +53,6 @@ RUN apk update && \
         libass-dev \
         libcrypto1.0 \
         libssl1.0 && \
-#        chromaprint 
-#        fdk-aac-dev && 
-#        gst-plugins-good1 
-#        gstreamer1 
     pip install --upgrade --no-cache-dir pip && \
     pip install --no-cache-dir \
         beets  \
@@ -60,7 +60,7 @@ RUN apk update && \
         discogs-client \
         flask \
         flask-cors \
-        gmusicapi \
+#        gmusicapi 
         pillow \
         pyacoustid \
         pylast \
